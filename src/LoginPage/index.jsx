@@ -1,6 +1,6 @@
 import "./index.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
 function LoginPage() {
@@ -9,6 +9,13 @@ function LoginPage() {
   const [showSubmitError, setShowSubmitError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = Cookies.get("jwt_token");
+    if (token) {
+      navigate("/home");
+    }
+  }, [navigate]);
 
   const onChangeUsername = (event) => {
     setUsername(event.target.value);

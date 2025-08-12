@@ -1,0 +1,99 @@
+.insta-profile-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+  font-family: sans-serif;
+}
+
+.insta-profile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.insta-profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.insta-profile-details {
+  flex: 1;
+}
+
+.insta-profile-username {
+  font-size: 24px;
+  margin: 0;
+}
+
+.insta-profile-realname {
+  font-size: 16px;
+  margin: 6px 0 4px;
+}
+
+.insta-profile-stats {
+  display: flex;
+  gap: 20px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.insta-profile-bio {
+  font-size: 14px;
+  color: #444;
+}
+
+.insta-story-list {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.insta-story-list img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.insta-posts-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.insta-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.insta-posts-grid img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ Mobile Responsive */
+@media screen and (max-width: 600px) {
+  .insta-profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .insta-profile-stats {
+    justify-content: center;
+  }
+
+  .insta-profile-details {
+    align-items: center;
+  }
+}

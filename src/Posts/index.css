@@ -1,0 +1,98 @@
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  padding: 2rem;
+}
+
+.post-card {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.user-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-header img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 0.8rem 1rem 0.3rem 1rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.like-icon {
+  color: #ed4956;
+}
+
+.comment-icon {
+  color: #262626;
+}
+
+.share-icon {
+  color: #0095f6;
+}
+
+.post-content {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.post-content p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.likes {
+  font-weight: bold;
+}
+
+.comment {
+  font-size: 14px;
+}
+
+.timestamp {
+  color: gray;
+  font-size: 12px;
+  margin-top: 8px;
+}

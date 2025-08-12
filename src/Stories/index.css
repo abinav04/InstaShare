@@ -1,0 +1,109 @@
+/* Wrapper centers the whole block */
+.stories-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main container with max width */
+.stories-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  padding: 24px 36px; /* adds space between arrows and stories */
+  box-sizing: border-box;
+}
+
+/* Story bubble container */
+.story-item {
+  text-align: center;
+  padding: 10px;
+}
+
+.story-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #e1306c;
+  object-fit: cover;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.story-img:hover {
+  transform: scale(1.05);
+}
+
+.story-name {
+  font-size: 14px;
+  color: #333;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Arrow base style */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Arrow icons */
+.arrow-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Desktop View: arrows slightly outside */
+@media (min-width: 769px) {
+  .custom-arrow.prev {
+    left: -16px;
+    background-color: #dcdcdc;
+  }
+
+  .custom-arrow.next {
+    right: -16px;
+    background-color: #2c3e50;
+  }
+
+  .custom-arrow.prev .arrow-icon {
+    color: #000;
+  }
+
+  .custom-arrow.next .arrow-icon {
+    color: #fff;
+  }
+}
+
+/* Mobile View: arrows inside container with spacing */
+@media (max-width: 768px) {
+  .custom-arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .custom-arrow.prev {
+    left: 8px;
+    background-color: #d0d0d0;
+  }
+
+  .custom-arrow.next {
+    right: 8px;
+    background-color: #d0d0d0;
+  }
+
+  .arrow-icon {
+    font-size: 16px;
+    color: #555;
+  }
+}

@@ -1,0 +1,130 @@
+.profile-container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Helvetica", sans-serif;
+  overflow-y: auto;
+}
+
+.profile-header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-username {
+  font-size: 24px;
+  margin: 0;
+}
+
+.profile-realname {
+  font-size: 16px;
+  margin: 6px 0 4px;
+  font-weight: 500;
+}
+
+.profile-bio {
+  font-size: 14px;
+  color: #444;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 16px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.story-list {
+  display: flex;
+  gap: 14px;
+  margin: 24px 0;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+  -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
+}
+
+.story-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.story-circle {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 2px solid #e2e2e2;
+  object-fit: cover;
+}
+
+.posts-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  gap: 6px;
+}
+
+.post-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.divider {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-stats {
+    justify-content: center;
+  }
+
+  .posts-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .post-image {
+    aspect-ratio: 1;
+    width: 100%;
+    object-fit: cover;
+  }
+}

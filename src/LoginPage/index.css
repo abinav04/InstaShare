@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+.loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 50px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.loginPage-img {
+  width: 500px;
+  max-width: 100%;
+}
+
+.logo {
+  width: 60px;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.loginPage > div {
+  width: 350px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.loginPage h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 30px;
+}
+
+.loginPage label {
+  display: block;
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 4px;
+}
+
+.loginPage input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.loginPage button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.loginPage button:hover {
+  background-color: #2563eb;
+}
+@media (max-width: 768px) {
+  .loginPage {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+
+  .loginPage-img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .loginPage > div {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    box-shadow: none;
+  }
+
+  .loginPage button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

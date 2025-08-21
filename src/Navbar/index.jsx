@@ -46,6 +46,9 @@ function Navbar() {
           <Link to="/profile" className="nav-link">
             Profile
           </Link>
+          <Link to="/saved" className="nav-link">
+            <p>SavedPosts</p>
+          </Link>
           <button onClick={logout}>Logout</button>
         </div>
 

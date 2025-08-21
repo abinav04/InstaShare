@@ -1,0 +1,100 @@
+.savedPostCard {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border: 1px solid #e2e8f0; /* light gray border */
+  border-radius: 12px;
+  margin: 20px auto;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  color: #1e293b;
+}
+
+/* 🔹 User Info */
+.personInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.personInfo img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #f1f5f9;
+  object-fit: cover;
+}
+
+.personInfo p {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* 🔹 Post Image */
+.postImg img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 🔹 User Interactions (Like, Comment, Share, Bookmark) */
+.userInterActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  font-size: 20px;
+}
+
+.userInterActions svg,
+.userInterActions img {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.userInterActions svg:hover,
+.userInterActions img:hover {
+  transform: scale(1.15);
+}
+
+/* 🔹 Post details */
+.postrelateddetails {
+  padding: 0 14px 10px;
+}
+
+.postrelateddetails p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.postrelateddetails p:first-child {
+  font-weight: 600;
+}
+
+/* 🔹 Comments */
+.comments {
+  padding: 0 14px 10px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.comments p {
+  margin: 3px 0;
+}
+
+.comments b {
+  color: #1e293b;
+}
+
+/* 🔹 Timestamp */
+.post-time {
+  padding: 0 14px 14px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}

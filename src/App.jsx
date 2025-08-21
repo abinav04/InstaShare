@@ -5,6 +5,8 @@ import Home from "./Home";
 import Profile from "./ProfilePage";
 import UserProfile from "./UserProfile";
 import SearchResults from "./SearchResults";
+import SavedPostsPage from "./SavedPostsPage";
+import Navbar from "./Navbar";
 function App() {
   return (
     <Routes>
@@ -41,8 +43,16 @@ function App() {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/saved"
+        element={
+          <ProtectedRoute>
+            <Navbar/>
+            <SavedPostsPage />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
-    
   );
 }
 

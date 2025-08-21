@@ -2,9 +2,15 @@ import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 import "./index.css";
+import { FaRegBookmark } from "react-icons/fa";
+import { FaBookmark } from "react-icons/fa6";
+import { useContext } from "react";
+import { SavePostContext } from "../context";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
+    const [isSaved, setIsSaved] = useState(false);
+     const { setterFunction, removeFunction } = useContext(SavePostContext);
 
   useEffect(() => {
     const getPosts = async () => {
@@ -108,6 +114,21 @@ function Posts() {
                 clipRule="evenodd"
               />
             </svg>
+            {!isSaved ? (
+              <FaRegBookmark
+                onClick={() => {
+                  setterFunction(post);
+                  setIsSaved(!isSaved);
+                }}
+              />
+            ) : (
+              <FaBookmark
+                onClick={() => {
+                  removeFunction(post);
+                  setIsSaved(!isSaved);
+                }}
+              />
+            )}
           </div>
 
           <div className="post-content">
